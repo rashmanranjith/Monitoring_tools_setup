@@ -30,7 +30,7 @@ eksctl version
 
 Step 5- Install Helm chart
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod 700get_helm.sh
+chmod 700 get_helm.sh
 ./get_helm.sh
 helm version
 
@@ -44,7 +44,7 @@ Step6-Creating anAmazon EKScluster using eksctl
  7.MinimumNumberofnodes: --nodes-min2
  8.MaximumNumberofnodes: --nodes-max3
 
-eksctl create cluster --name eks2 --version 1.24 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.medium --nodes 2 --nodes-min 2 --nodes-max 3
+eksctl create cluster --name eks2 --version 1.28 --region us-east-1 --nodegroup-name worker-nodes --node-type t2.medium --nodes 2 --nodes-min 2 --nodes-max 3
 
 Step6.1-IFANYERROR:
 awseksupdate-kubeconfig--region<region-code>--name<cluster-name>
